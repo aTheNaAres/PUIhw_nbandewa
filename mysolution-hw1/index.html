@@ -1,15 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-  <meta charset="UTF-8">
-  <title>Page Title</title>
+<html lang = "en">
+  <meta charset = "UTF-8">
   
+  <head>
+    <link rel = "stylesheet" href = "css/style.css">
+
+    <!-- From https://www.seatheme.net/poppins-font-not-working-correctly/ -->
+    <link href = "https://fonts.googleapis.com/css2?family=Poppins&display=swap" 
+          rel = "stylesheet">
+    
+    <title>Bun Bun Bake Shop Gallery</title>  
+  </head>
+
+  <header>
+    <a href = "./index.html">
+      <img src = "assets/logo-01.svg"
+      class = "header-logo"      
+      alt = "Logo"/> 
+    </a>
+    <hr class = "header-separator">
+  </header>
+
   <body>
+    <nav>
+      <ul>
+        <li class = "nav-element"> 
+          <a class = "active-link" href = "./index.html">PRODUCTS</a></li>
+        <li class = "nav-element"> 
+          <a href = "./cart.html">CART</a></li>
+      </ul>
+    </nav>  
+  
+    <main class = "homepage">
+      <h1>Our hand-made cinnamon rolls</h1>
 
-    <h1>I am the solution to HW hooray!</h1>
+      <a class = "product-gallery-container" href =  "./product-detail.html">
+        <img src = "assets/original-cinnamon-roll.jpg"
+        class = "product-image"
+        alt = "Original Cinnamon Roll Image"/>
+        <p class = "product-name">Original Cinnamon Roll</p>      
+        <p class = "product-price">$2.49</p>        
+      </a>
 
-    <p>
-        And I can link to <a href="./otherpage.html">other pages.</a>
-    </p>
+      <a class = "product-gallery-container" href =  "./product-detail.html">
+        <img src = "assets/apple-cinnamon-roll.jpg"
+        class = "product-image"
+        alt = "Apple Cinnamon Roll Image"/>
+        <p class = "product-name">Apple Cinnamon Roll</p>      
+        <p class = "product-price">$3.49</p>
+      </a>
 
+      <a class = "product-gallery-container" href =  "./product-detail.html">
+        <img src = "assets/raisin-cinnamon-roll.jpg"
+        class = "product-image"
+        alt = "Raisin Cinnamon Roll Image"/>
+        <p class = "product-name">Raisin Cinnamon Roll</p>      
+        <p class = "product-price">$2.99</p>
+      </a>
+
+      <a class = "product-gallery-container" href =  "./product-detail.html">
+        <img src = "assets/walnut-cinnamon-roll.jpg"
+        class = "product-image"
+        alt = "Walnut Cinnamon Roll Image"/>
+        <p class = "product-name">Walnut Cinnamon Roll</p>      
+        <p class = "product-price">$3.49</p>
+      </a>
+
+      <a class = "product-gallery-container" href =  "./product-detail.html">
+        <img src = "assets/double-chocolate-cinnamon-roll.jpg"
+        class = "product-image"
+        alt = "Double-Chocolate Cinnamon Roll Image"/>
+        <p class = "product-name">Double-Chocolate Cinnamon Roll</p>      
+        <p class = "product-price">$3.99</p>
+      </a>
+
+      <a class = "product-gallery-container" href =  "./product-detail.html">
+        <img src = "assets/strawberry-cinnamon-roll.jpg"
+        class = "product-image"
+        alt = "Strawberry Cinnamon Roll Image"/>
+        <p class = "product-name">Strawberry Cinnamon Roll</p>      
+        <p class = "product-price">$3.99</p>
+      </a>
+
+    </main>
   </body>
 </html>
