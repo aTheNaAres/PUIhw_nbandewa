@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "en">
+  
+  <head>
+    <meta charset = "UTF-8">
+    <link rel = "stylesheet" href = "css/style.css">
+
+    <!-- From https://www.seatheme.net/poppins-font-not-working-correctly/ -->
+    <link href = "https://fonts.googleapis.com/css2?family=Poppins&display=swap" 
+          rel = "stylesheet">
+
+    <title>Bun Bun Bake Shop Cart</title>
+  </head>  
+
+  <body>
+    <header>
+      <a href = "./index.html">
+        <img src = "assets/logo-01.svg"
+        class = "header-logo"      
+        alt = "Logo"/> 
+      </a>
+      <hr class = "header-separator">
+    </header>
+  
+    <nav>
+      <ul>
+        <li class = "nav-element"> 
+          <a href = "./index.html">PRODUCTS</a></li>
+        <li class = "nav-element"> 
+          <a class = "active-link" href = "./cart.html">CART</a></li>
+      </ul>
+    </nav>  
+  
+    <main class = "cart-page">
+      <h1>Shopping Cart</h1>
+
+      <div class = "product-gallery-container">
+        <figure class = "product-image">
+          <img src = "assets/original-cinnamon-roll.jpg"
+          alt = "Original Cinnamon Roll Image"/>
+          <figcaption class = "drop-item">Remove</figcaption>
+        </figure>
+        <!-- Keeping them in separate element to keep it dynamic for future design -->
+        <p class = "product-name">Original Cinnamon Roll</p>
+        <p class = "product-name">Glazing: Keep Original</p>
+        <p class = "product-name">Pack Size: 1</p>     
+        <p class = "product-price">$2.49</p>
+      </div>
+
+      <div class = "product-gallery-container">
+        <figure class = "product-image">
+          <img src = "assets/double-chocolate-cinnamon-roll.jpg"
+          alt = "Double Chocolate Cinnamon Roll Image"/>
+          <figcaption class = "drop-item">Remove</figcaption>
+        </figure>
+        <!-- Keeping them in separate element to keep it dynamic for future design -->
+        <p class = "product-name">Double Chocolate Cinnamon Roll</p>
+        <p class = "product-name">Glazing: Sugar Milk</p>
+        <p class = "product-name">Pack Size: 6</p>     
+        <p class = "product-price">$27.45</p>
+      </div>
+
+      <hr class = "cart-separator">
+
+      <p class = "total-price">Total: $29.94</p>
+
+      <p class = "checkout-button">Checkout</p>
+          
+    </main>
+  </body>
+</html>
