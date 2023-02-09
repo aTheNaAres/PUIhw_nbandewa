@@ -3,7 +3,9 @@
   
   <head>
     <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel = "stylesheet" href = "css/style.css">
+    <link rel = "stylesheet" href = "css/product-detail.css">
 
     <!-- From https://www.seatheme.net/poppins-font-not-working-correctly/ -->
     <link href = "https://fonts.googleapis.com/css2?family=Poppins&display=swap" 
@@ -14,55 +16,59 @@
 
   <body>
     <header>
-      <a href = "./index.html">
-        <img src = "assets/logo-01.svg"
-        class = "header-logo"      
+      <a id = "logo" href = "./index.html">
+        <img src = "assets/logo-01.svg"     
         alt = "Logo"/> 
       </a>
-      <hr class = "header-separator">
-    </header>
-
-    <nav>
-      <ul>
-        <li class = "nav-element"> 
-          <a class = "active-link" href = "./index.html">PRODUCTS</a></li>
-        <li class = "nav-element"> 
-          <a href = "./cart.html">CART</a></li>
-      </ul>
-    </nav>  
+      <div class = "nav-wrapper">
+        <nav>
+          <ul>
+            <li class = "nav-element"> 
+              <a class = "active-link" href = "./index.html">Products</a></li>
+            <li class = "nav-element"> 
+              <a href = "./cart.html">Cart</a></li>
+          </ul>
+        </nav>
+        <div class = "page-title-container">
+          <h1>Original Cinnamon Roll</h1>
+        </div>
+      </div>      
+    </header> 
   
-    <main class = "product-detail-page">
-      <h1>Original Cinnamon Roll</h1>
+    <main>
+      <div class = "detail-page-wrapper">
+        <div class = "image-container">
+          <img src = "assets/original-cinnamon-roll.jpg"
+          class = "product-image"
+          alt = "Original Cinnamon Roll"/>
+        </div>
+              
+        <div class = "checkout-container">
+          <p class = "description-text">Customize our delicious, hand-made 
+            cinnamon roll to your liking!</p>
 
-      <div class = "product-detail-container">
-        <img src = "assets/original-cinnamon-roll.jpg"
-        class = "product-image"
-        alt = "Original Cinnamon Roll"/>
-      </div>
-            
-      <div class = "checkout-container">
-        <p class = "description-text">Customize our delicious, hand-made 
-          cinnamon roll to your liking!</p>
+          <div class = "customization-wrapper">
+            <label class = "customize-dropdown-label">Glazing:</label>
+            <select class = "customize-dropdown">
+              <option>Keep Original</option>
+              <option>Sugar milk</option>
+              <option>Vanilla milk</option>
+              <option>Double chocolate</option>
+            </select>
+          
+            <label class = "customize-dropdown-label">Pack-Size:</label>
+            <select class = "customize-dropdown">
+              <option>1</option>
+              <option>3</option>
+              <option>6</option>
+              <option>12</option>
+            </select>
+          </div>
 
-        <label class = "customize-dropdown-label">Glazing:</label>
-        <select class = "customize-dropdown">
-          <option>Keep Original</option>
-          <option>Sugar milk</option>
-          <option>Vanilla milk</option>
-          <option>Double chocolate</option>
-        </select>
-      
-        <label class = "customize-dropdown-label">Pack-Size:</label>
-        <select class = "customize-dropdown">
-          <option>1</option>
-          <option>3</option>
-          <option>6</option>
-          <option>12</option>
-        </select>
-
-        <div class = "addtocart-box">
-          <p class = "price">$ 2.49</p>
-          <p class = "addtocart-button">Add to Cart</p>
+          <div class = "addtocart-box">
+            <p class = "price">$ 2.49</p>
+            <button class = "addtocart-button">Add to Cart</button>
+          </div>
         </div>
       </div>
           
