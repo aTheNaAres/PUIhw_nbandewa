@@ -17,7 +17,7 @@ let allGlazingOptions = [
     name: "Double Chocolate",
     value: 1.5
   }
-]
+];
 
 let allPackSizeOptions = [
   {
@@ -36,7 +36,7 @@ let allPackSizeOptions = [
     name: "12",
     value: 10
   }
-]
+];
 
 // Function to add options to a SelectBox
 function addOptions(array, selectBox) {
@@ -61,7 +61,7 @@ let basePrice = parseFloat(document.querySelector("#product-total-price").textCo
 
 // Function to update the total price in the UI
 function updatePriceElement(price) {
-  priceElement = document.querySelector("#product-total-price")
+  let priceElement = document.querySelector("#product-total-price");
   priceElement.innerHTML = `$ ${price}`;
 }
 
@@ -70,15 +70,15 @@ function priceChange() {
   let glazingPrice = parseFloat(glazingSelectBox.options[glazingSelectBox.selectedIndex].value);
   let sizePrice = parseFloat(packSizeSelectBox.options[packSizeSelectBox.selectedIndex].value);
   // Limit to two decimals
-  updatedPrice = ((basePrice + glazingPrice) * sizePrice).toFixed(2);
+  let updatedPrice = ((basePrice + glazingPrice) * sizePrice).toFixed(2);
 
   // Call the function to update the UI
   updatePriceElement(updatedPrice);
 }
 
 //  Add Event Listeners for both selectboxes and call the same function on change
-glazingSelectBox.addEventListener('change', priceChange)
-packSizeSelectBox.addEventListener('change', priceChange)
+glazingSelectBox.addEventListener('change', priceChange);
+packSizeSelectBox.addEventListener('change', priceChange);
 
 //  Update the UI to show the price for the default options
 priceChange();
