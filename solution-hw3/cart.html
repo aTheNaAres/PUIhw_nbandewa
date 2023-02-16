@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang = "en">
+  
+  <head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" href = "css/style.css">
+    <link rel = "stylesheet" href = "css/cart.css">
+
+    <!-- From https://www.seatheme.net/poppins-font-not-working-correctly/ -->
+    <link href = "https://fonts.googleapis.com/css2?family=Poppins&display=swap" 
+          rel = "stylesheet">
+
+    <title>Bun Bun Bake Shop Cart</title>
+  </head>  
+
+  <body>
+    <header>
+      <a id = "logo" href = "./index.html">
+        <img src = "assets/logo-01.svg"     
+        alt = "Logo"/> 
+      </a>
+      <div class = "nav-wrapper">
+        <nav>
+          <ul>
+            <li class = "nav-element"> 
+              <a href = "./index.html">Products</a></li>
+            <li class = "nav-element"> 
+              <a class = "active-link" href = "./cart.html">Cart</a></li>
+          </ul>
+        </nav>
+        <div class = "page-title-container">
+          <h1>Shopping Cart</h1>
+        </div>
+      </div>      
+    </header> 
+  
+    <main>
+
+      <div class = "cart-wrapper">
+        <div class = "cart-listing">
+          <figure class = "product-image">
+            <img src = "assets/original-cinnamon-roll.jpg"
+            alt = "Original Cinnamon Roll Image"/>
+            <figcaption class = "drop-item">Remove</figcaption>
+          </figure>
+          <div class = "product-details">
+            <p>Original Cinnamon Roll</p>
+            <p>Glazing: Keep Original</p>
+            <p>Pack Size: 1</p> 
+          </div>
+          <div class = "product-price">
+            <p>$2.49</p>
+          </div>          
+        </div>
+
+        <div class = "cart-listing">
+          <figure class = "product-image">
+            <img src = "assets/double-chocolate-cinnamon-roll.jpg"
+            alt = "Double Chocolate Cinnamon Roll Image"/>
+            <figcaption class = "drop-item">Remove</figcaption>
+          </figure>
+          <div class = "product-details">
+            <p>Double Chocolate Cinnamon Roll</p>
+            <p>Glazing: Sugar Milk</p>
+            <p>Pack Size: 6</p>
+          </div>
+          <div class = "product-price">
+            <p>$27.45</p>
+          </div>
+        </div>      
+
+        <div class = "checkout-container">
+          <div id = "align-div"></div>
+          <p id = "total"> Total</p>
+          <p class = "total-price">$29.94</p>
+        </div>
+        <button class = "checkout-button">Checkout</button>
+      </div>
+          
+    </main>
+  </body>
+</html>
