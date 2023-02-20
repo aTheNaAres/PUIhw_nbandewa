@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+p, select, label, button {
+  font-size: 16px;
+}
+
+button {
+  font-weight: bold;
+}
+
+a {
+  color: #121212;
+  text-decoration: None;
+}
+
+main {
+  margin: 50px 5% 5% 5%;
+}
+
+body {
+  margin: 1% 2% 1% 2%;
+}
+
+/* Overall Distribution of Header */
+header {
+  display: flex;
+  column-gap: 20px;
+}
+
+#logo{
+  flex: 0 0 25%;
+}
+
+.nav-wrapper{
+  flex: 0 0 75%;
+}
+
+/* Right Side Flexbox of Header */
+nav {
+  height: 50%;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-bottom: 5px solid #121212;
+}
+
+.page-title-container {
+  height: 50%;
+  position: relative;
+}
+
+/* Navigation Bar Links */
+nav > ul {
+  position: relative;
+  top: 25%;
+  float: right;
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+  list-style: None;
+  margin: 0 50px 0 0;
+  padding: 0 0 0 0;
+}
+
+.nav-element > a {
+  padding: 5px 5px 5px 5px;
+}
+
+.nav-element > a:hover {
+  background-color: yellow;
+}
+
+.active-link {
+  background: yellow;
+  font-weight: bold;
+}
+
+/* Page Title */
+.page-title-container h1 {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0 0 0 0;
+}
