@@ -1,51 +1,50 @@
-// All Glazing and Pack Size Options as separate arrays
+// All Glazing and Pack Size Options
 
-const allGlazingOptions = [
-  {
-    name: "Keep Original",
-    value: 0
+const allGlazingOptions = {
+  "keep-original": {
+    price: 0,
+    displayName: "Keep Original"
   },
-  {
-    name: "Sugar Milk",
-    value: 0
+  "sugar-milk": {
+    price: 0,
+    displayName: "Sugar Milk"
   },
-  {
-    name: "Vanilla Milk",
-    value: 0.5
+  "vanilla-milk": {
+    price: 0.5,
+    displayName: "Vanilla Milk"
   },
-  {
-    name: "Double Chocolate",
-    value: 1.5
+  "double-chocolate": {
+    price: 1.5,
+    displayName: "Double Chocolate"
   }
-];
+};
 
-const allPackSizeOptions = [
-  {
-    name: "1",
-    value: 1
+const allPackSizeOptions = {
+  "pack-of-1": {
+    price: 1,
+    displayName: "1"
   },
-  {
-    name: "3",
-    value: 3
+  "pack-of-3": {
+    price: 3,
+    displayName: "3"
   },
-  {
-    name: "6",
-    value: 5
+  "pack-of-6": {
+    price: 5,
+    displayName: "6"
   },
-  {
-    name: "12",
-    value: 10
+  "pack-of-12": {
+    price: 10,
+    displayName: "12"
   }
-];
+};
 
 // Function to add options to a SelectBox
-function addOptions(array, selectBox) {
-  for (let index = 0; index < array.length; index++)
+function addOptions(dict, selectBox) {
+  for (let key in dict)
   {
-    let item = array[index];
-    let option = document.createElement('option');
-    option.text = item.name;
-    option.value = item.value;
+    let option = document.createElement("option");
+    option.text = dict[key].displayName;
+    option.value = key;
     selectBox.add(option, undefined);
   }
 }
@@ -65,12 +64,10 @@ function updatePriceElement(price) {
   priceElement.innerHTML = `$ ${price}`;
 }
 
-
-
 // Compute the New Price
 function priceChange() {
-  let glazingPrice = parseFloat(glazingSelectBox.options[glazingSelectBox.selectedIndex].value);
-  let sizePrice = parseFloat(packSizeSelectBox.options[packSizeSelectBox.selectedIndex].value);
+  let glazingPrice = parseFloat(allGlazingOptions[glazingSelectBox.value].price);
+  let sizePrice = parseFloat(allPackSizeOptions[packSizeSelectBox.value].price);
   // Limit to two decimals
   let updatedPrice = ((basePrice + glazingPrice) * sizePrice).toFixed(2);
 

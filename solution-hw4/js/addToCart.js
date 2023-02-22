@@ -1,3 +1,9 @@
+const addToCartBox = document.querySelector(".addtocart-button")
+
+// addToCartBox.style.backgroundColor = 'white'
+
+
+
 const cart = [];
 
 // From assignment description
@@ -11,11 +17,15 @@ class Roll {
   }
 }
 
+function updateButton() {
+
+}
+
 function addToCart() {
-  let glazingOption = glazingSelectBox.options[glazingSelectBox.selectedIndex].innerHTML;
-  let sizeOption = packSizeSelectBox.options[packSizeSelectBox.selectedIndex].innerHTML;
-  let price = currentRoll.basePrice;
   let type = rollType;
+  let glazingOption = allGlazingOptions[glazingSelectBox.value].displayName;
+  let sizeOption = allPackSizeOptions[packSizeSelectBox.value].displayName;
+  let price = currentRoll.basePrice;
 
   // Construct the new Instance and add it to the Cart array
   let newCartItem = new Roll(type, glazingOption, sizeOption, price);
@@ -24,6 +34,5 @@ function addToCart() {
 }
 
 // Call the addToCart function everytime we click on the button
-const addToCartBox = document.querySelector(".addtocart-button")
 
 addToCartBox.addEventListener('click', addToCart);
