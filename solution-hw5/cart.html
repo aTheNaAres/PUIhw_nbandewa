@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang = "en">
+  
+  <head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" href = "css/style.css">
+    <link rel = "stylesheet" href = "css/cart.css">
+
+    <script defer src = "js/rollsData.js"></script>
+    <script defer src = "js/cartListing.js"></script> 
+
+    <!-- From https://www.seatheme.net/poppins-font-not-working-correctly/ -->
+    <link href = "https://fonts.googleapis.com/css2?family=Poppins&display=swap" 
+          rel = "stylesheet">
+
+    <title>Bun Bun Bake Shop Cart</title>
+  </head>  
+
+  <body>
+    <header>
+      <a id = "logo" href = "./index.html">
+        <img src = "assets/logo-01.svg"     
+        alt = "Logo"/> 
+      </a>
+      <div class = "nav-wrapper">
+        <nav>
+          <ul>
+            <li class = "nav-element"> 
+              <a href = "./index.html">Products</a></li>
+            <li class = "nav-element"> 
+              <a class = "active-link" href = "./cart.html">Cart</a></li>
+          </ul>
+        </nav>
+        <div class = "page-title-container">
+          <h1>Shopping Cart</h1>
+        </div>
+      </div>      
+    </header> 
+  
+    <main>
+      <div class = "cart-wrapper">
+        <!-- Template For Cart Listings -->
+        <template>
+          <div class = "cart-listing">
+            <figure class = "product-image">
+              <img/>
+              <figcaption class = "drop-item" onclick = "dropItem(this)"></figcaption>
+            </figure>
+            <div class = "product-details">
+              <p></p>
+              <p></p>
+              <p></p> 
+            </div>
+            <div class = "product-price">
+              <p></p>
+            </div>          
+          </div>
+        </template>
+
+      </div>
+      <div class = "checkout-wrapper">
+        <div class = "checkout-container" class = "cart-wrapper">
+          <div id = "align-div"></div>
+          <p id = "total"> Total</p>
+          <p class = "total-price"></p>
+        </div>
+        <button class = "checkout-button">Checkout</button>
+      </div>
+          
+    </main>
+  </body>
+</html>

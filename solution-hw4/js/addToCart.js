@@ -1,9 +1,5 @@
 const addToCartBox = document.querySelector(".addtocart-button")
 
-// addToCartBox.style.backgroundColor = 'white'
-
-
-
 const cart = [];
 
 // From assignment description
