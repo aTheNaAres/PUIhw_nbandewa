@@ -101,6 +101,7 @@ function populateItemDetails(template) {
                                     template.querySelector(".product-price > p").innerHTML = `$${itemPrice}`;
 
   // Add the price of the item to the Total
+  console.log(itemPrice)
   let listingID = template.querySelector(".cart-listing").id;
   cartItemPrices[listingID] = parseFloat(itemPrice);
   updateTotal();
@@ -118,7 +119,8 @@ function updateTotal() {
 
   // From https://stackoverflow.com/questions/1230233/how-to-find-the-sum-of-an-array-of-numbers
   function add(sum, newValue) {
-    return sum + newValue
+    // Limit to 2 Decimals, although it has been done before add for redundancy and convert to Float
+    return parseFloat((sum + newValue).toFixed(2))
   }
 
   let totalPrice = prices.reduce(add, 0);
