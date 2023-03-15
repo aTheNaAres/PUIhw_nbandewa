@@ -60,21 +60,21 @@ const allGlazingOptions = {
     }
   };
   
-  const allPackSizeOptions = {
-    "pack-of-1": {
-      price: 1,
-      displayName: "1"
-    },
-    "pack-of-3": {
-      price: 3,
-      displayName: "3"
-    },
-    "pack-of-6": {
-      price: 5,
-      displayName: "6"
-    },
-    "pack-of-12": {
-      price: 10,
-      displayName: "12"
-    }
-  };
+const allPackSizeOptions = {
+"pack-of-1": {
+  price: 1,
+  displayName: "1"
+},
+"pack-of-3": {
+  price: 3,
+  displayName: "3"
+},
+"pack-of-6": {
+  price: 5,
+  displayName: "6"
+},
+"pack-of-12": {
+  price: 10,
+  displayName: "12"
+}
+};
