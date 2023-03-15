@@ -1,8 +1,3 @@
-if (sessionStorage.getItem("storedRolls") != null) {
-  retrieveFromSessionStorage();
-  console.log(cart)
-}
-
 let cartItemPrices = {};
 
 populateCart();
@@ -83,8 +78,10 @@ function dropItem(element) {
   let listingID = element.parentElement.parentElement.id;
   delete cartItemPrices[listingID];
   element.parentElement.parentElement.remove();
+  // Remove it from the cart in localStorage
   cart.splice(listingID, 1);
   updateTotal();
-  saveToSessionStorage();
+  // Save the cart back to the Local Storage
+  saveToLocalStorage();
   console.log(cart)
 }

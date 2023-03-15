@@ -1,3 +1,17 @@
+// Define the class Roll
+
+class Roll {
+
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+    }
+  }
+
+// All Rolls available
+
 const rolls = {
     "Original": {
         "basePrice": 2.49,
@@ -24,3 +38,43 @@ const rolls = {
         "imageFile": "strawberry-cinnamon-roll.jpg"
     }    
 };
+
+// All Glazing and Pack Size Options
+
+const allGlazingOptions = {
+    "keep-original": {
+      price: 0,
+      displayName: "Keep Original"
+    },
+    "sugar-milk": {
+      price: 0,
+      displayName: "Sugar Milk"
+    },
+    "vanilla-milk": {
+      price: 0.5,
+      displayName: "Vanilla Milk"
+    },
+    "double-chocolate": {
+      price: 1.5,
+      displayName: "Double Chocolate"
+    }
+  };
+  
+  const allPackSizeOptions = {
+    "pack-of-1": {
+      price: 1,
+      displayName: "1"
+    },
+    "pack-of-3": {
+      price: 3,
+      displayName: "3"
+    },
+    "pack-of-6": {
+      price: 5,
+      displayName: "6"
+    },
+    "pack-of-12": {
+      price: 10,
+      displayName: "12"
+    }
+  };

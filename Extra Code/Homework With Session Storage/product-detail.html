@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang = "en">
+  
+  <head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" href = "css/style.css">
+    <link rel = "stylesheet" href = "css/product-detail.css">
+
+    <script defer src = "js/rollsData.js"></script>
+    <script defer src = "js/price.js"></script>
+
+    <!-- From https://www.seatheme.net/poppins-font-not-working-correctly/ -->
+    <link href = "https://fonts.googleapis.com/css2?family=Poppins&display=swap" 
+          rel = "stylesheet">
+          
+    <!-- Javascript will fill out the Title -->
+    <title></title>
+  </head>
+
+  <body>
+    <header>
+      <a id = "logo" href = "./index.html">
+        <img src = "assets/logo-01.svg"     
+        alt = "Logo"/> 
+      </a>
+      <div class = "nav-wrapper">
+        <nav>
+          <ul>
+            <li class = "nav-element"> 
+              <a class = "active-link" href = "./index.html">Products</a></li>
+            <li class = "nav-element"> 
+              <a href = "./cart.html">Cart</a></li>
+          </ul>
+        </nav>
+        <div class = "page-title-container">
+          <!-- Javascript will fill out H1 -->
+          <h1></h1>
+        </div>
+      </div>      
+    </header> 
+  
+    <main>
+      <div class = "detail-page-wrapper">
+        <div class = "image-container">
+          <!-- Javascript will add the Image -->
+          <img class = "product-image"/>
+        </div>
+              
+        <div class = "checkout-container">
+          <p class = "description-text">Customize our delicious, hand-made 
+            cinnamon roll to your liking!</p>
+
+          <div class = "customization-wrapper">
+            <label class = "customize-dropdown-label">Glazing:</label>
+            <select id = "glazing-options" 
+                    class = "customize-dropdown"
+                    onchange = "glazingChange(this)">
+            </select>
+          
+            <label class = "customize-dropdown-label">Pack-Size:</label>
+            <select id = "pack-size" 
+                    class = "customize-dropdown"
+                    onchange = "packChange(this)">
+            </select>
+          </div>
+
+          <div class = "addtocart-box">
+            <p id = "product-total-price" class = "price">$ 2.49</p>
+            <button class = "addtocart-button" onclick = "addToCart()">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+          
+    </main>
+  </body>
+</html>
