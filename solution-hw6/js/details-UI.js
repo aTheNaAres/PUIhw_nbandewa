@@ -65,6 +65,7 @@ function packChange(element) {
 
 function updateTotalPrice() {
   const glazingPrice = allGlazingOptions[glazingOption].price;
+	console.log(allGlazingOptions)
 	const packPrice = allPackSizeOptions[packSizeOption].price;
 	const totalPrice = (basePrice + glazingPrice) * packPrice;
 	const totalPriceField = document.querySelector("#product-total-price");
